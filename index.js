@@ -7,6 +7,7 @@ document.getElementById('copy').addEventListener('click', copy);
 function copy(e){
     var copyText = document.getElementById('teamkey');
     copyText.select();
+    copyText.setSelectionRange(0,99999);
     navigator.clipboard.writeText(copyText.value);
     alert("Copied Team Key");
 }    
