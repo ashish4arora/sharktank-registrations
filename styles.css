@@ -89,3 +89,18 @@ h1{
     width: 100% !important;
     height: 100% !important;
 }
+
+@media screen and (max-width:420px) {
+    #copy{
+        border-radius: 0.25rem;
+    }
+    #teamkey{
+        text-align: center;
+    }
+    #registration-form{
+        width: 55vw;
+    }
+    #payment p{
+        text-align: center;
+    }
+}
