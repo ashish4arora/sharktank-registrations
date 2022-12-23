@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SharkTank</title>
+</head>
+<body class="w-100">
+    <video src="./assets/oceanback.mp4" id = "oceanback" autoplay loop muted></video>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <div class="container border border-2">
+    <h1 class="">SharTank Becon'23 Registration</h1>
+    <form id = "registration-form">
+        <div class = "form-group">
+            <label for="email">Email Address</label>
+            <input type="email" class="form-control" id="email" placeholder="Enter email">
+        </div>
+        <div class="form-group">
+            <label for="startupName">Startup Name</label>
+            <input type="text" class="form-control" id="startupName" placeholder="Startup Name">
+        </div>
+        <div class="form-group">
+            <label for="startupStage">Stage of Startup</label>
+            <div class="form-check">
+                <input type="radio" class="form-check-input" name="radioIdeation" id = "radioIdeation">
+                <label for="radioIdeation" class="form-check-label">Ideation</label>
+            </div>
+            <div class="form-check">
+                <input type="radio" class="form-check-input" name="radioMvp" id = "radioMvp">
+                <label for="radioMvp" class="form-check-label">MVP</label>
+            </div>
+            <div class="form-check">
+                <input type="radio" class="form-check-input" name="radioFunded" id = "radioFunded">
+                <label for="radioFunded" class="form-check-label">Venture Funded</label>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="teamLeaderName">Name of the Team Leader</label>
+            <input type="text" class="form-control" id="teamLeaderName" placeholder="Team Leader Name">
+        </div>
+        <div class="form-group">
+            <label for="teamLeaderMobile">Mobile number of the Team Leader</label>
+            <input type="number" class="form-control" id="teamLeaderMobile" placeholder="Team Leader Mobile">
+        </div>
+        <div class="form-group">
+            <label for="teamLeaderEmail">Email ID of the Team Leader</label>
+            <input type="email" class="form-control" id="teamLeaderEmail" placeholder="Team Leader Email">
+        </div>
+        <div class="form-group">
+            <label for="member2Name">Name of the Team Member 2</label>
+            <input type="text" class="form-control" id="member2Name" placeholder="Team Member 2 Name">
+        </div>
+        <div class="form-group">
+            <label for="member3Name">Name of the Team Member 3</label>
+            <input type="text" class="form-control" id="member3Name" placeholder="Team Member 3 Name">
+        </div>
+        <div class="form-group">
+            <label for="age">How long have you been working on this startup?</label>
+            <div class="form-check">
+                <input type="radio" class="form-check-input" name="age-one" id = "age-one">
+                <label for="age-one" class="form-check-label">Less than 6 months</label>
+            </div>
+            <div class="form-check">
+                <input type="radio" class="form-check-input" name="age-two" id = "age-two">
+                <label for="age-two" class="form-check-label">Less than 2 years and greater than 6 months</label>
+            </div>
+            <div class="form-check">
+                <input type="radio" class="form-check-input" name="age-three" id = "age-three">
+                <label for="age-three" class="form-check-label">Greater than 2 years</label>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="pitchdeck">Link to your pitch deck in pdf format on Google Drive (Make sure its public)</label>
+            <input type="text" class="form-control" id="pitchdeck" placeholder="Link">
+        </div>
+        <center><button type="submit" class="btn btn-primary" id="submit">Proceed</button></center>
+    </form> 
+    <div id = "payment" class = "hidden">
+        <p>Your Secret Team Key is</p>
+        <p id = "teamkey">null</p>
+        <p>Pay using the button below and enter your team key to secure your registration</p>
+        <div> <a class = "btn btn-primary" href='https://pmny.in/qIocQVtHD3nh' target="_blank" > Pay Now </a> </div>
+    </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-database.js"></script>
+    <script>
+        const firebaseConfig = {
+          apiKey: "AIzaSyDEXJkuxZ2QbfATEbt_twsOBnarfDokAlQ",
+          authDomain: "becon23-sharktank.firebaseapp.com",
+          projectId: "becon23-sharktank",
+          storageBucket: "becon23-sharktank.appspot.com",
+          messagingSenderId: "565933180323",
+          appId: "1:565933180323:web:2455cc018003fd288a4616",
+          databaseURL: "https://becon23-sharktank-default-rtdb.asia-southeast1.firebasedatabase.app/",
+          measurementId: "G-R16YV1M4V9"
+        };
+      
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+      </script>
+    <script src="index.js"></script>
+</body>
+</html>
