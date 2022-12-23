@@ -10,7 +10,7 @@ html, body{
 
 h1{
     width: fit-content;
-    margin: 3vh auto;
+    margin: 4vh auto;
 }
 
 #registration-form{
@@ -28,6 +28,25 @@ h1{
     background: white;
     max-height: 100vh;
     overflow-y: scroll;
+    scrollbar-width: thin;
+    scrollbar-color: #0275d8;
+}
+
+.container::-webkit-scrollbar{
+    width: 8px;
+}
+
+.container::-webkit-scrollbar-track{
+    background: #f1f1f1;
+}
+
+.container::-webkit-scrollbar-thumb{
+    background: #0275d8;
+    border-radius: 10px;
+}
+
+.container::-webkit-scrollbar-thumb:hover{
+    background: #0259a3;
 }
 
 #oceanback{

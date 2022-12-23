@@ -2,6 +2,15 @@ const database = firebase.database();
 
 document.getElementById('submit').addEventListener('click', submitForm);
 
+document.getElementById('copy').addEventListener('click', copy);
+
+function copy(e){
+    var copyText = document.getElementById('teamkey');
+    copyText.select();
+    navigator.clipboard.writeText(copyText.value);
+    alert("Copied Team Key");
+}   
+
 function submitForm(e){
     e.preventDefault();
 
@@ -46,7 +55,7 @@ function submitForm(e){
     const formRef = database.ref('team-details');
     const newRef = formRef.push(teamdetails);
     const refKey = newRef.key;
-    document.getElementById('teamkey').innerHTML = refKey
+    document.getElementById('teamkey').value = refKey
     document.getElementById('registration-form').classList.add('hidden');
     document.getElementById('payment').classList.remove('hidden');
 
