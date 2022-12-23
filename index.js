@@ -9,7 +9,7 @@ function copy(e){
     copyText.select();
     navigator.clipboard.writeText(copyText.value);
     alert("Copied Team Key");
-}   
+}    
 
 function submitForm(e){
     e.preventDefault();
