@@ -9,6 +9,7 @@ html, body{
 }
 
 h1{
+    text-align: center;
     width: fit-content;
     margin: 4vh auto;
 }
@@ -77,4 +78,13 @@ h1{
 #payment *{
     width: fit-content;
     margin: 10px auto
+}
+
+.wrapper{
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    width: 100% !important;
+    height: 100% !important;
 }
