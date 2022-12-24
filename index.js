@@ -47,7 +47,7 @@ function submitForm(e){
     }else if (document.getElementById('radioMvp').checked){
         var stage = "MVP";
     }else if (document.getElementById('radioFunded').checked){
-        var stage = "Venture Funded";
+        var stage = "Funded";
     }
     var teamLeaderName = getValue('teamLeaderName');
     var teamLeaderMobile = getValue('teamLeaderMobile');
