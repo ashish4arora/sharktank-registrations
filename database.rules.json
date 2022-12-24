@@ -1,6 +1,10 @@
 {
   "rules": {
-    ".read": false,
-    ".write": true
+    "team-details": {
+      "$key": {
+        ".write": "!data.exists()",
+        ".read": false
+      }
+    }
   }
 }

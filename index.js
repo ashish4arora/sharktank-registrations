@@ -16,7 +16,7 @@ function submitForm(e){
     e.preventDefault();
 
     //Get values
-    var email = getValue('email');
+    // var email = getValue('email');
     var startupName = getValue('startupName');
     if (document.getElementById("radioIdeation").checked){
         var stage = "Ideation";
@@ -41,7 +41,7 @@ function submitForm(e){
     var pitchdeck = getValue('pitchdeck');
 
     const teamdetails = {
-        email: email,
+        // email: email,
         startup_name : startupName,
         stage : stage,
         teamleader_name : teamLeaderName,
