@@ -8,9 +8,32 @@ function copy(e){
     var copyText = document.getElementById('teamkey');
     copyText.select();
     copyText.setSelectionRange(0,99999);
-    navigator.clipboard.writeText(copyText.value);
-    alert("Copied Team Key");
-}    
+    // navigator.clipboard.writeText(copyText.value);
+    copyToClipboard(copyText.value);
+}   
+
+async function copyToClipboard(text) {
+    // Try using the navigator.clipboard API
+    try {
+      await navigator.clipboard.writeText(text);
+      console.log("Copied Team Key");
+    } catch (error) {
+      fallbackCopyTextToClipboard(text);
+    }
+  }
+  
+  function fallbackCopyTextToClipboard(text) {
+    var textarea = document.createElement("textarea");
+    textarea.value = text;
+    textarea.contentEditable = true;
+    textarea.readOnly = true;
+    document.body.appendChild(textarea);
+    textarea.select();
+    document.execCommand("copy");
+    console.log("Copied Team Key")
+    document.body.removeChild(textarea);
+  }
+  
 
 function submitForm(e){
     e.preventDefault();
