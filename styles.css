@@ -101,6 +101,7 @@ h1{
     }
     #teamkey{
         text-align: center;
+        border-radius: 0.25rem;
     }
     #registration-form{
         width: 55vw;

@@ -15,8 +15,9 @@ function copy(e){
 async function copyToClipboard(text) {
     // Try using the navigator.clipboard API
     try {
-      await navigator.clipboard.writeText(text);
-      console.log("Copied Team Key");
+      await navigator.clipboard.writeText(text).then(() => {
+        alert("Copied Team Key")
+      });
     } catch (error) {
       fallbackCopyTextToClipboard(text);
     }
@@ -30,7 +31,7 @@ async function copyToClipboard(text) {
     document.body.appendChild(textarea);
     textarea.select();
     document.execCommand("copy");
-    console.log("Copied Team Key")
+    alert("Copied Team Key")
     document.body.removeChild(textarea);
   }
   
