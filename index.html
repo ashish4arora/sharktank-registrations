@@ -32,8 +32,8 @@
             <input type="email" class="form-control" id="email" placeholder="Enter email">
         </div> -->
         <div class="form-group">
-            <label for="startupName">Startup Name</label>
-            <input type="text" class="form-control" id="startupName" placeholder="Startup Name">
+            <label for="startupName" class="required-field">Startup Name</label>
+            <input type="text" class="form-control" id="startupName" placeholder="Startup Name" required>
         </div>
         <div class="form-group">
             <label for="startupStage">Stage of Startup</label>
@@ -51,16 +51,16 @@
             </div>
         </div>
         <div class="form-group">
-            <label for="teamLeaderName">Name of the Team Leader</label>
-            <input type="text" class="form-control" id="teamLeaderName" placeholder="Team Leader Name">
+            <label for="teamLeaderName" class="required-field">Name of the Team Leader</label>
+            <input type="text" class="form-control" id="teamLeaderName" placeholder="Team Leader Name" required>
         </div>
         <div class="form-group">
             <label for="teamLeaderMobile">Mobile number of the Team Leader</label>
             <input type="number" class="form-control" id="teamLeaderMobile" placeholder="Team Leader Mobile">
         </div>
         <div class="form-group">
-            <label for="teamLeaderEmail">Email ID of the Team Leader</label>
-            <input type="email" class="form-control" id="teamLeaderEmail" placeholder="Team Leader Email">
+            <label for="teamLeaderEmail" class="required-field">Email ID of the Team Leader</label>
+            <input type="email" class="form-control" id="teamLeaderEmail" placeholder="Team Leader Email" required>
         </div>
         <div class="form-group">
             <label for="member2Name">Name of the Team Member 2</label>
@@ -86,8 +86,27 @@
             </div>
         </div>
         <div class="form-group">
-            <label for="pitchdeck">Link to your pitch deck in pdf format on Google Drive (Make sure it is public)</label>
-            <input type="text" class="form-control" id="pitchdeck" placeholder="Link">
+            <label for="pitchdeck" class="required-field">Link to your pitch deck in pdf format on Google Drive (Make sure it is public)</label>
+            <input type="text" class="form-control" id="pitchdeck" placeholder="Link" required>
+        </div>
+        <div class = "form-group">
+            <label for="howknow" class="required-field">How did you get to know about this event?</label>
+            <select class="form-select" aria-label="Select" id="howknow" required>
+                <option selected value = "">Select</option>
+                <option value="Campus Ambassador">Campus Ambassador</option>
+                <option value="Friend">Friend</option>
+                <option value="Instagram">Instagram</option>
+                <option value="Website">Website</option>
+                <option value="Whatsapp">Whatsapp</option>
+                <option value="Youtube">Youtube</option>
+                <option value="Twitter">Twitter</option>
+                <option value="Email">Email</option>
+                <option value="Other">Other</option>
+              </select>
+        </div>
+        <div class="form-group">
+            <label for="referralCode">Referral Code (if any)</label>
+            <input type="text" class="form-control" id="referralCode" placeholder="Referral Code">
         </div>
         <center><button type="submit" class="btn btn-primary" id="submit">Proceed To Pay</button></center>
     </form> 

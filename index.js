@@ -1,6 +1,6 @@
 const database = firebase.database();
 
-document.getElementById('submit').addEventListener('click', submitForm);
+document.getElementById('registration-form').addEventListener('submit', submitForm);
 
 document.getElementById('copy').addEventListener('click', copy);
 
@@ -48,7 +48,10 @@ function submitForm(e){
         var stage = "MVP";
     }else if (document.getElementById('radioFunded').checked){
         var stage = "Funded";
+    }else{
+        var stage = "";
     }
+
     var teamLeaderName = getValue('teamLeaderName');
     var teamLeaderMobile = getValue('teamLeaderMobile');
     var teamLeaderEmail = getValue('teamLeaderEmail');
@@ -61,8 +64,14 @@ function submitForm(e){
         var age = ">6months & <2years";
     }else if (document.getElementById('age-three').checked){
         var age = ">2years";
+    }else{
+        var age = "";
     }
+
     var pitchdeck = getValue('pitchdeck');
+    var howknow = getValue('howknow');
+    var referralCode = getValue('referralCode');
+
 
     const teamdetails = {
         // email: email,
@@ -74,7 +83,9 @@ function submitForm(e){
         member2 : member2,
         member3 : member3,
         startup_age : age,
-        pitchdeck : pitchdeck
+        pitchdeck : pitchdeck,
+        howknow: howknow,
+        referralCode: referralCode
     }
 
     const formRef = database.ref('team-details');

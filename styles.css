@@ -111,3 +111,13 @@ h1{
     }
 }
 
+.required-field::after{
+    content: "*";
+    color: red;
+}
+
+#howknow{
+    border-radius: 0.25rem;
+    margin: auto 0.3rem;
+    padding: 0.35rem;
+}
