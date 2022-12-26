@@ -95,6 +95,23 @@ h1{
     height: 100% !important;
 }
 
+.required-field::after{
+    content: "*";
+    color: red;
+}
+
+#howknow{
+    border-radius: 0.25rem;
+    margin: auto 0.3rem;
+    padding: 0.35rem;
+}
+
+@media screen and (max-width: 1020px){
+    #howknow{
+        margin: auto;
+    }
+}
+
 @media screen and (max-width:420px) {
     #copy{
         border-radius: 0.25rem;
@@ -109,15 +126,4 @@ h1{
     #payment p{
         text-align: center;
     }
-}
-
-.required-field::after{
-    content: "*";
-    color: red;
-}
-
-#howknow{
-    border-radius: 0.25rem;
-    margin: auto 0.3rem;
-    padding: 0.35rem;
 }
